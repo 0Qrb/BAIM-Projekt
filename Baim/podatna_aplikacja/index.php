@@ -1,6 +1,6 @@
 <?php
 //ini_set('session.cookie_samesite', 'Strict');
-
+//ini_set('session.cookie_httponly', 1);
 
 session_start();
 $host = 'localhost';
@@ -33,6 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $error = 'Niepoprawna nazwa użytkownika lub hasło';
     }
+
+
+    session_start();
+
 }
 ?>
 

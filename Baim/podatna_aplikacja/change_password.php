@@ -1,5 +1,6 @@
 <?php
 //ini_set('session.cookie_samesite', 'Strict');
+//ini_set('session.cookie_httponly', 1);
 
 session_start();
 
@@ -46,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Zmień Hasło</h1>
     
     <?php if ($message): ?>
-        <p style="color: green;"><?php echo htmlspecialchars($message); ?></p>
+        <p style="color: green;"><?php echo $message; ?></p>
     <?php endif; ?>
 
     <form action="change_password.php" method="POST">

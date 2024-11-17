@@ -1,6 +1,6 @@
 <?php
 //ini_set('session.cookie_samesite', 'Strict');
-
+//ini_set('session.cookie_httponly', 1);
 
 session_start();
 
@@ -23,11 +23,13 @@ $user_id = $_SESSION['user_id'];
     <title>Strona Ofiara</title>
 </head>
 <body>
-    <h1>Witaj, <?php echo htmlspecialchars($username); ?>!</h1>
-    <p>Twój ID: <?php echo htmlspecialchars($user_id); ?></p>
+    <h1>Witaj, <?php echo $username; ?>!</h1>
+    <p>Twój ID: <?php echo $user_id; ?></p>
 
     <form action="change_password.php" method="GET">
         <button type="submit">Zmień hasło</button>
     </form>
+    <a href="xss.php">Xss</a><br>
+    <a href="cookie_aes.php">Szyfrowane ciasteczka</a>
 </body>
 </html>
