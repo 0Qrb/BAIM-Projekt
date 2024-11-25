@@ -55,5 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="password" name="new_password" id="new_password" required>
         <button type="submit">Zmień hasło</button>
     </form>
+	<a href="victim.php">Back</a><br>
 </body>
 </html>

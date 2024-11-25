@@ -26,9 +26,7 @@ $user_id = $_SESSION['user_id'];
     <h1>Witaj, <?php echo $username; ?>!</h1>
     <p>Twój ID: <?php echo $user_id; ?></p>
 
-    <form action="change_password.php" method="GET">
-        <button type="submit">Zmień hasło</button>
-    </form>
+    <a href="change_password.php">Zmień hasło</a><br>
     <a href="xss.php">Xss</a><br>
     <a href="cookie_aes.php">Szyfrowane ciasteczka</a>
 </body>
